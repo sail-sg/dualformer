@@ -9,18 +9,18 @@ This repo is the implementation of our manuscript entitled "[Local-Global Strati
 
 ##  Installation & Requirement
 
-Please refer to [install.md](https://github.com/open-mmlab/mmaction2/blob/master/docs/en/install.md) for installation. The docker files are also provided for convenient usage - [cuda10.1](https://hub.docker.com/layers/ninja0/mmdet/pytorch1.7.1-py37-cuda10.1-openmpi-mmcv1.3.3-apex-timm/images/sha256-06d745934cb255e7fdf4fa55c47b192c81107414dfb3d0bc87481ace50faf90b?context=repo) and [cuda11.0](https://hub.docker.com/layers/ninja0/mmdet/pytorch1.7.1-py37-cuda11.0-openmpi-mmcv1.3.3-apex-timm/images/sha256-79ec3ec5796ca154a66d85c50af5fa870fcbc48357c35ee8b612519512f92828?context=repo). 
+Please refer to [install.md](https://github.com/open-mmlab/mmaction2/blob/master/docs/install.md) for installation. The docker files are also provided for convenient usage - [cuda10.1](https://hub.docker.com/layers/ninja0/mmdet/pytorch1.7.1-py37-cuda10.1-openmpi-mmcv1.3.3-apex-timm/images/sha256-06d745934cb255e7fdf4fa55c47b192c81107414dfb3d0bc87481ace50faf90b?context=repo) and [cuda11.0](https://hub.docker.com/layers/ninja0/mmdet/pytorch1.7.1-py37-cuda11.0-openmpi-mmcv1.3.3-apex-timm/images/sha256-79ec3ec5796ca154a66d85c50af5fa870fcbc48357c35ee8b612519512f92828?context=repo). 
 
 All models are trained on 8 Nvidia A100 GPUs. For example, training a DualFormer-T on Kinetics-400 takes ∼31 hours on 8 A100 GPUs, while training a larger model DualFormer-B on Kinetics-400 requires ∼3 days on 8 A100 GPUs. 
 
 ##  Data Preparation
 
-Please first see [data_preparation.md](https://github.com/open-mmlab/mmaction2/blob/master/docs/en/data_preparation.md) for a general knowledge of data preparation.
+Please first see [data_preparation.md](https://github.com/open-mmlab/mmaction2/blob/master/docs/data_preparation.md) for a general knowledge of data preparation.
 
 - For **Kinetics-400/600**, as these are dynamic datasets (videos may be removed from YouTube), we employ [this repo](https://github.com/cvdfoundation/kinetics-dataset) to download the original files and the annotatoins. Only a few number of corrupted videos are removed (around 50).
 - For other datasets, i.e., **HMDB-51, UCF-101 and Diving-48**, we use the data downloader provided by mmaction2 as aforementioned.
 
-The full supported datasets are listed below (more details in [supported_datasets.md](https://github.com/open-mmlab/mmaction2/tree/master/docs/en/supported_datasets.md)):
+The full supported datasets are listed below (more details in [supported_datasets.md](https://github.com/open-mmlab/mmaction2/tree/master/docs/supported_datasets.md)):
 
 <table style="margin-left:auto;margin-right:auto;font-size:1.3vw;padding:3px 5px;text-align:center;vertical-align:center;">
   <tr>
